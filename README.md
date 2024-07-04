@@ -9,12 +9,6 @@
 - Hot reloading (Pug)
 - Hot reloading (SCSS)
 
-
-## Acknowledgements
-
- - [Как происходит компиляция и конвертация Pug файлов в HTML](https://awesomeopensource.com/project/elangosundar/awesome-README-templates)
- - [Как происходит компиляция и конвертация SCSS файлов в HTML](https://github.com/matiassingers/awesome-readme)
-
 ## Запуск
 
 Перед тем как запустить проект, напишите в терминале с проектом следующие команды
