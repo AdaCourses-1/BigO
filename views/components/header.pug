@@ -1,5 +1,32 @@
-header
+header.header
     .container
-        .logo
-        nav.nav
-        .actions
+        .header__row
+
+            .header__logo.logo
+                a.logo__link(href="./index.html")
+                    img.logo__image(src="../../../img/logo.png" alt="Furniro")
+
+
+
+            nav.header__nav.nav
+                ul.nav__list
+                    each navItem in ['Home', 'Shop', 'About', 'Contact']
+                        li.nav__item
+                            a.nav__link(href="#")= navItem
+
+
+
+            .header__actions.actions
+                ul.actions__list
+                    li.actions__item
+                        a(href="#").actions__link
+                            img(src="../../../img/account-alert.svg" alt="Account").actions__icon
+                    li.actions__item
+                        a(href="#").actions__link
+                            img(src="../../../img/search.svg" alt="search").actions__icon
+                    li.actions__item
+                        a(href="#").actions__link
+                            img(src="../../../img/heart.svg" alt="heart").actions__icon
+                    li.actions__item
+                        a(href="#").actions__link
+                            img(src="../../../img/cart.svg" alt="cart").actions__icon
