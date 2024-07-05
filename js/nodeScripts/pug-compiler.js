@@ -2,7 +2,6 @@ const fs = require("fs");
 const path = require("path");
 const pug = require("pug");
 const chokidar = require("chokidar");
-const sass = require("node-sass");
 
 // Цвета терминала
 const red = "\x1b[31m";
