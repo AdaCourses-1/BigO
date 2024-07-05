@@ -9,47 +9,55 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
+      - name: Checkout code
+        uses: actions/checkout@v2
 
-    - name: Setup Node.js
-      uses: actions/setup-node@v2
-      with:
-        node-version: '20.14.0'
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '20.14.0'
 
-    - name: Send Telegram notification
-      env:
-        TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
-        TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-        GITHUB_EVENT: ${{ toJson(github.event) }}
-      run: |
-        PR_AUTHOR=$(echo "$GITHUB_EVENT" | jq -r .pull_request.user.login)
-        PR_TITLE=$(echo "$GITHUB_EVENT" | jq -r .pull_request.title)
-        PR_URL=$(echo "$GITHUB_EVENT" | jq -r .pull_request.html_url)
-        PR_DESCRIPTION=$(echo "$GITHUB_EVENT" | jq -r .pull_request.body)
-        BASE_BRANCH=$(echo "$GITHUB_EVENT" | jq -r .pull_request.base.ref)
-        TARGET_BRANCH=$(echo "$GITHUB_EVENT" | jq -r .pull_request.head.ref)
-        PR_STATE=$(echo "$GITHUB_EVENT" | jq -r .pull_request.state)
-        REVIEWER_NAME=$(echo "$GITHUB_EVENT" | jq -r '.pull_request.requested_reviewers[0].login // empty')
-        MERGE_STATE=$(echo "$GITHUB_EVENT" | jq -r '.pull_request.mergeable_state // empty')
-        
-        if [ "$PR_STATE" = "open" ]; then
-          ACTION="создал"
-        else
-          ACTION="закрыл"
-        fi
+      - name: Install jq and curl
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y jq curl
 
-        if [ -z "$REVIEWER_NAME" ]; then
-          REVIEWER="Нет назначенного ревьюера"
-        else
-          REVIEWER="Ревьюер: $REVIEWER_NAME"
-        fi
+      - name: Send Telegram notification
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          GITHUB_EVENT: ${{ toJson(github.event) }}
+        run: |
+          PR_AUTHOR=$(echo "$GITHUB_EVENT" | jq -r .pull_request.user.login)
+          PR_TITLE=$(echo "$GITHUB_EVENT" | jq -r .pull_request.title)
+          PR_URL=$(echo "$GITHUB_EVENT" | jq -r .pull_request.html_url)
+          PR_DESCRIPTION=$(echo "$GITHUB_EVENT" | jq -r .pull_request.body)
+          BASE_BRANCH=$(echo "$GITHUB_EVENT" | jq -r .pull_request.base.ref)
+          TARGET_BRANCH=$(echo "$GITHUB_EVENT" | jq -r .pull_request.head.ref)
+          PR_STATE=$(echo "$GITHUB_EVENT" | jq -r .pull_request.state)
+          REVIEWER_NAME=$(echo "$GITHUB_EVENT" | jq -r '.pull_request.requested_reviewers[0].login // empty')
+          MERGE_STATE=$(echo "$GITHUB_EVENT" | jq -r '.pull_request.mergeable_state // empty')
+          
+          if [ "$PR_STATE" = "open" ]; then
+            ACTION="создал"
+          else
+            ACTION="закрыл"
+          fi
 
-        MESSAGE="*$PR_AUTHOR* $ACTION Pull Request [*$PR_TITLE*]($PR_URL)
+          if [ -z "$REVIEWER_NAME" ]; then
+            REVIEWER="Нет назначенного ревьюера"
+          else
+            REVIEWER="Ревьюер: $REVIEWER_NAME"
+          fi
+
+          MESSAGE="*$PR_AUTHOR* $ACTION Pull Request [*$PR_TITLE*]($PR_URL)
 *Описание:* \"$PR_DESCRIPTION\"
 *Из ветки:* $BASE_BRANCH
 *В ветку:* $TARGET_BRANCH
 *$REVIEWER*
 *Конфликты:* $MERGE_STATE"
 
-        curl -s -X POST "https://api.telegram.org/bot$TELEGRAM_BOT_TOKEN/sendMessage" -d chat_id=$TELEGRAM_CHAT_ID -d text="$MESSAGE" -d parse_mode="Markdown"
+          curl -s -X POST "https://api.telegram.org/bot$TELEGRAM_BOT_TOKEN/sendMessage" \
+            -d chat_id=$TELEGRAM_CHAT_ID \
+            -d text="$MESSAGE" \
+            -d parse_mode="Markdown"
