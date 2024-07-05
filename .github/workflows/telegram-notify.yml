@@ -36,16 +36,16 @@ jobs:
           TARGET_BRANCH=$(echo "$GITHUB_EVENT" | jq -r .pull_request.head.ref)
           PR_STATE=$(echo "$GITHUB_EVENT" | jq -r .pull_request.state)
           REVIEWER_NAME=$(echo "$GITHUB_EVENT" | jq -r '.pull_request.requested_reviewers[0].login // empty')
-          MERGE_STATE=$(echo "$GITHUB_EVENT" | jq -r '.pull_request.mergeable_state // empty')
+          MERGED=$(echo "$GITHUB_EVENT" | jq -r .pull_request.merged)
           
-          if [ "$PR_STATE" = "open" ]; then
-            ACTION="Создал"
-          else
-            ACTION="Закрыл"
-          fi
-
-          if [ "$PR_STATE" = "closed" ] && [ "$MERGE_STATE" = "clean" ]; then
+          if [ "$PR_STATE" = "closed" ] && [ "$MERGED" = "true" ]; then
             ACTION="Успешно залил"
+          else
+            if [ "$PR_STATE" = "open" ]; then
+              ACTION="Создал"
+            else
+              ACTION="Закрыл"
+            fi
           fi
 
           if [ -z "$REVIEWER_NAME" ]; then
