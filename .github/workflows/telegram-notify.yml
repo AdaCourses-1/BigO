@@ -51,11 +51,11 @@ jobs:
           fi
 
           MESSAGE="*$PR_AUTHOR* $ACTION Pull Request [*$PR_TITLE*]($PR_URL)
-*Описание:* \"$PR_DESCRIPTION\"
-*Из ветки:* $BASE_BRANCH
-*В ветку:* $TARGET_BRANCH
-*$REVIEWER*
-*Конфликты:* $MERGE_STATE"
+          *Описание:* $PR_DESCRIPTION
+          *Из ветки:* $BASE_BRANCH
+          *В ветку:* $TARGET_BRANCH
+          *$REVIEWER*
+          *Конфликты:* $MERGE_STATE"
 
           curl -s -X POST "https://api.telegram.org/bot$TELEGRAM_BOT_TOKEN/sendMessage" \
             -d chat_id=$TELEGRAM_CHAT_ID \
