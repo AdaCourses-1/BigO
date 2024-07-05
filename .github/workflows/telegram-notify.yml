@@ -14,8 +14,8 @@ jobs:
 
     - name: Send Telegram notification
       env:
-        TELEGRAM_BOT_TOKEN: ${{ secrets.7373988365:AAECxJ7_Aw77BMal1yzMt3c1qpUTwUujO9s }}
-        TELEGRAM_CHAT_ID: ${{ secrets.773243284 }}
+        TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+        TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         GITHUB_EVENT: ${{ github.event }}
       run: |
         PR_TITLE=$(echo $GITHUB_EVENT | jq -r .pull_request.title)
