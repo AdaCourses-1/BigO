@@ -334,11 +334,38 @@ img {
   display: flex;
   gap: 20px;
 }
-.range__img-subtitle {
+.range__subtitle {
   padding: 30px;
   text-align: center;
   font-size: 24px;
   font-weight: 600;
+}
+.range__column {
+  width: 33.33%;
+}
+@media (max-width: 560px) {
+  .range__row {
+    flex-wrap: wrap;
+    padding-top: 30px;
+    gap: 10px;
+  }
+  .range__column {
+    width: 100%;
+  }
+  .range__title {
+    font-size: 28px;
+  }
+  .range__desc {
+    font-size: 16px;
+  }
+  .range__subtitle {
+    font-size: 20px;
+    padding: 20px 0;
+  }
+  .range__img {
+    max-height: 280px;
+    width: 100%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
