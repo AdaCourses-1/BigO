@@ -184,6 +184,10 @@ body {
   font-style: normal;
 }
 
+img {
+  max-width: 100%;
+}
+
 .header {
   padding: 30px 0;
 }
