@@ -39,9 +39,9 @@ jobs:
           MERGE_STATE=$(echo "$GITHUB_EVENT" | jq -r '.pull_request.mergeable_state // empty')
           
           if [ "$PR_STATE" = "open" ]; then
-            ACTION="создал"
+            ACTION="Создал"
           else
-            ACTION="закрыл"
+            ACTION="Закрыл"
           fi
 
           if [ -z "$REVIEWER_NAME" ]; then
@@ -50,8 +50,9 @@ jobs:
             REVIEWER="Ревьюер: $REVIEWER_NAME"
           fi
 
-          MESSAGE="*$PR_AUTHOR* $ACTION Pull Request [*$PR_TITLE*]($PR_URL)
-          
+          MESSAGE="
+          *Пользователь:* $PR_AUTHOR
+          *Действие:* $ACTION Pull Request [*$PR_TITLE*]($PR_URL)
           *Описание:* $PR_DESCRIPTION
           *Из ветки:* $BASE_BRANCH
           *В ветку:* $TARGET_BRANCH
