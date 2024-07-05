@@ -1,0 +1,26 @@
+name: Telegram Notification
+
+on:
+  pull_request:
+    types: [opened, closed]
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Send Telegram notification
+      env:
+        TELEGRAM_BOT_TOKEN: ${{ secrets.7373988365:AAECxJ7_Aw77BMal1yzMt3c1qpUTwUujO9s }}
+        TELEGRAM_CHAT_ID: ${{ secrets.773243284 }}
+        GITHUB_EVENT: ${{ github.event }}
+      run: |
+        PR_TITLE=$(echo $GITHUB_EVENT | jq -r .pull_request.title)
+        PR_URL=$(echo $GITHUB_EVENT | jq -r .pull_request.html_url)
+        PR_STATE=$(echo $GITHUB_EVENT | jq -r .pull_request.state)
+        MESSAGE="Pull Request '$PR_TITLE' ($PR_URL) is now $PR_STATE."
+        
+        curl -s -X POST "https://api.telegram.org/bot$TELEGRAM_BOT_TOKEN/sendMessage" -d chat_id=$TELEGRAM_CHAT_ID -d text="$MESSAGE"
