@@ -3,7 +3,7 @@
     "version": "1.0.0",
     "main": "app.js",
     "scripts": {
-        "start": "nodemon --watch views --watch js/build.js --exec node js/build.js",
+        "start": "nodemon --watch views --watch js/index.js --exec node js/index.js",
         "serve": "node app.js"
     },
     "dependencies": {
