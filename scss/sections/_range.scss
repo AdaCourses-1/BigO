@@ -1,0 +1,30 @@
+.range{
+
+    &__title{
+        padding-top: 56px;
+        text-align: center;
+        font-size: 32px;
+        font-weight: 700;
+    }
+
+    &__desc{
+        padding-top: 10px;
+        font-size: 20px;
+        font-weight: 400;
+        text-align: center;
+        color:  #666666;
+    }
+
+    &__row{
+        padding-top: 63px;
+        display: flex;
+        gap: 20px;
+    }
+
+    &__img-subtitle{
+        padding: 30px;
+        text-align: center;
+        font-size: 24px;
+        font-weight: 600;
+    }
+}
