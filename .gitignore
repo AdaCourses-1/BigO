@@ -1,4 +1,101 @@
-./Compiled-HTML/
-Compiled-HTML/views
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
 
-scss/style.css.map
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Dependency directories
+node_modules/
+jspm_packages/
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Optional REPL history
+.node_repl_history
+
+# Output of 'npm pack'
+*.tgz
+
+# Optional coverage directory
+coverage/
+
+# Optional config directory
+/.idea
+/.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# Environment variables
+.env
+
+# Debugging and build output
+build/
+dist/
+.DS_Store
+
+# Temporary files
+tmp/
+temp/
+
+# Compiled JavaScript files
+*.tsbuildinfo
+
+# Optional ESLint cache
+.eslintcache
+
+# Optional TypeScript cache
+*.tsbuildinfo
+
+# Optional Stylelint cache
+.stylelintcache
+
+# Ignore OS-specific files
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+*~
+
+# IDE-specific files
+# IntelliJ
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# VS Code
+.vscode/
+.history
+
+# JetBrains Rider
+.idea/
+*.sln.iml
+
+# Sublime Text
+*.sublime-workspace
+*.sublime-project
+
+# vim
+*.swp
+*.swo
