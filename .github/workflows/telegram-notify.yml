@@ -16,7 +16,7 @@ jobs:
       env:
         TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
         TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-        GITHUB_EVENT: ${{ github.event }}
+        GITHUB_EVENT: ${{ toJson(github.event) }}
       run: |
         PR_TITLE=$(echo $GITHUB_EVENT | jq -r .pull_request.title)
         PR_URL=$(echo $GITHUB_EVENT | jq -r .pull_request.html_url)
