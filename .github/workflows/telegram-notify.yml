@@ -50,8 +50,9 @@ jobs:
             REVIEWER="Ревьюер: $REVIEWER_NAME"
           fi
 
-          MESSAGE="*$PR_AUTHOR* $ACTION Pull Request [*$PR_TITLE*]($PR_URL)
-          
+          MESSAGE="
+          *Пользователь:* $PR_AUTHOR
+          *Действие:* $$ACTION Pull Request [*$PR_TITLE*]($PR_URL)
           *Описание:* $PR_DESCRIPTION
           *Из ветки:* $BASE_BRANCH
           *В ветку:* $TARGET_BRANCH
