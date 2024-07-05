@@ -44,6 +44,10 @@ jobs:
             ACTION="Закрыл"
           fi
 
+          if [ "$PR_STATE" = "closed" ] && [ "$MERGE_STATE" = "clean" ]; then
+            ACTION="Успешно залил"
+          fi
+
           if [ -z "$REVIEWER_NAME" ]; then
             REVIEWER="Нет назначенного ревьюера"
           else
@@ -51,12 +55,12 @@ jobs:
           fi
 
           MESSAGE="
-          *Пользователь:* $PR_AUTHOR
-          *Действие:* $ACTION Pull Request [*$PR_TITLE*]($PR_URL)
-          *Описание:* $PR_DESCRIPTION
-          *Из ветки:* $BASE_BRANCH
-          *В ветку:* $TARGET_BRANCH
-          *$REVIEWER*
+          *Пользователь:* $PR_AUTHOR\n\
+          *Действие:* $ACTION Pull Request [*$PR_TITLE*]($PR_URL)\n\
+          *Описание:* $PR_DESCRIPTION\n\
+          *Из ветки:* $BASE_BRANCH\n\
+          *В ветку:* $TARGET_BRANCH\n\
+          *$REVIEWER*\n\
           *Конфликты:* $MERGE_STATE"
 
           curl -s -X POST "https://api.telegram.org/bot$TELEGRAM_BOT_TOKEN/sendMessage" \
