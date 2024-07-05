@@ -44,6 +44,10 @@ jobs:
             ACTION="Закрыл"
           fi
 
+          if [ "$PR_STATE" = "closed" ] && [ "$MERGE_STATE" = "clean" ]; then
+            ACTION="Успешно залил"
+          fi
+
           if [ -z "$REVIEWER_NAME" ]; then
             REVIEWER="Нет назначенного ревьюера"
           else
