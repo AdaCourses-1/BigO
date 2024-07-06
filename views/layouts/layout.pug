@@ -25,15 +25,17 @@ html(lang="en")
             barba.init({
             transitions: [{
                 name: 'opacity-transition',
+                sync: false,
                 leave(data) {
                     const menu = document.querySelector('.menu')
                     const mobileNav = document.querySelector('.mobile-nav')
 
                     menu?.classList.remove('active');
-                    mobileNav.classList.remove('active');
+                    mobileNav?.classList.remove('active');
 
                     return gsap.to(data.current.container, {
-                        opacity: 0
+                        opacity: 0,
+                        duration: .5
                     });
                 },
                 enter(data) {
@@ -41,11 +43,17 @@ html(lang="en")
                     const mobileNav = document.querySelector('.mobile-nav')
 
                     menu?.classList.remove('active');
-                    mobileNav.classList.remove('active');
+                    mobileNav?.classList.remove('active');
+
+                    gsap.to(data.current.container, {
+                        display: 'none',
+                        duration: 0
+                    });
 
                     return gsap.from(data.next.container, {
-                        opacity: 0
+                        opacity: 0,
+                        duration: .5
                     });
                 }
-            }]
+                }]
             });
