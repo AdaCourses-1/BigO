@@ -1,6 +1,7 @@
 extends ../layouts/layout.pug
 
 block content
-    include ../sections/range.pug
-    include ../sections/product.pug
+    main(data-barba="container" data-barba-namespace="home")
+        include ../sections/range.pug
+        include ../sections/product.pug
 
