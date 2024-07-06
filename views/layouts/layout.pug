@@ -13,7 +13,39 @@ html(lang="en")
         title Furniro
         link(rel='icon' sizes='32x32' href='./img/favicon-logo.png' type='image/png')
         link(rel="stylesheet" href="./css/style.css")
-    body
+    body(data-barba="wrapper")
         include ../components/header.pug
         block content
         include ../components/footer.pug
+
+        script(src="https://cdn.jsdelivr.net/npm/@barba/core")
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js") 
+
+        script.
+            barba.init({
+            transitions: [{
+                name: 'opacity-transition',
+                leave(data) {
+                    const menu = document.querySelector('.menu')
+                    const mobileNav = document.querySelector('.mobile-nav')
+
+                    menu?.classList.remove('active');
+                    mobileNav.classList.remove('active');
+
+                    return gsap.to(data.current.container, {
+                        opacity: 0
+                    });
+                },
+                enter(data) {
+                    const menu = document.querySelector('.menu')
+                    const mobileNav = document.querySelector('.mobile-nav')
+
+                    menu?.classList.remove('active');
+                    mobileNav.classList.remove('active');
+
+                    return gsap.from(data.next.container, {
+                        opacity: 0
+                    });
+                }
+            }]
+            });

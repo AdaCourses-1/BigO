@@ -1,9 +1,10 @@
 extends ../layouts/layout.pug
 
 block content
-    .container.blog-container
-        section.posts
-            include ../components/post.pug
-            include ../components/post.pug
-            include ../components/post.pug
-        aside
+    main(data-barba="container" data-barba-namespace="blog")
+        .container.blog-container
+            section.posts
+                include ../components/post.pug
+                include ../components/post.pug
+                include ../components/post.pug
+            aside
