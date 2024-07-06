@@ -398,15 +398,11 @@ img {
   font-size: 20px;
   font-weight: 600;
   color: #020202;
-  padding: 8px 0 30px 16px;
 }
 .product__old-price {
-  position: absolute;
   font-size: 16px;
-  font-weight: 500px;
+  font-weight: 500;
   color: #898989;
-  margin-top: -45px;
-  margin-left: 170px;
 }
 .product__el {
   position: relative;
@@ -438,6 +434,24 @@ img {
 }
 .product__teg-price {
   color: #f4f5f7;
+}
+.product__prices {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px 15px 15px;
+  gap: 10px;
+}
+@media (max-width: 560px) {
+  .product__row {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .product__el {
+    width: 100%;
+  }
+  .product__img {
+    width: 100%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
