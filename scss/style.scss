@@ -1,6 +1,11 @@
 @import "./base";
 
+// Компоненты сайта
 @import "./components/header";
 
+// Секции сайта
 @import "./sections/range";
 @import "./sections/product";
+
+// Страницы сайта
+@import "./pages/blog";
