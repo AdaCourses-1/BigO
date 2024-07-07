@@ -316,6 +316,39 @@ img {
   transition: 0.2s;
 }
 
+.advantages {
+  background-color: #FAF3EA;
+  padding: 100px 0;
+}
+.advantages .container {
+  max-width: 1480px;
+}
+.advantages__row {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+.advantages__column {
+  width: 25%;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+.advantages__title {
+  font-size: 25px;
+  font-weight: 600;
+  line-height: 37.5px;
+}
+.advantages__subtitle {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 30px;
+  color: #898989;
+}
+.advantages__icon {
+  max-width: 60px;
+}
+
 .range__title {
   padding-top: 56px;
   text-align: center;
