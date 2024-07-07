@@ -1,4 +1,12 @@
-@import './base';
+@import "./base";
 
+// Компоненты сайта
 @import './components/header';
 @import './components/advantages';
+
+// Секции сайта
+@import "./sections/range";
+@import "./sections/product";
+
+// Страницы сайта
+@import "./pages/blog";
