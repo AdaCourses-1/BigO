@@ -328,7 +328,7 @@ img {
   font-weight: 700;
 }
 .footer__info {
-  width: 285px;
+  max-width: 285px;
   margin-right: 136px;
 }
 .footer__subtitle {
