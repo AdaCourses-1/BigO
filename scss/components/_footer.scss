@@ -3,7 +3,6 @@
 
   &__row {
     display: flex;
-
   }
 
   &__title {
@@ -13,7 +12,7 @@
   }
 
   &__info {
-    width: 285px;
+    max-width: 285px;
     margin-right: 136px;
   }
 
@@ -42,11 +41,11 @@
   }
 
   .subscribe {
-     margin-left: 15px;
+    margin-left: 15px;
     margin-top: 70px;
     position: relative;
     &::before {
-      content: '';
+      content: "";
       position: absolute;
       left: 0;
       bottom: 0;
@@ -57,38 +56,35 @@
       border-radius: 3px;
     }
   }
- 
- 
-   .footer-email {
+
+  .footer-email {
     &__input {
       color: #9f9f9f;
       font-size: 16px;
       border: none;
       border-bottom: 2px solid#000000;
-       padding-bottom: 5px;
-       padding-right: 5px;
-       text-decoration: none;
+      padding-bottom: 5px;
+      padding-right: 5px;
+      text-decoration: none;
     }
     &__title {
-        margin-bottom: 53px;
-        color: #9f9f9f;
-        font-size: 16px;
-        font-weight: 400;
+      margin-bottom: 53px;
+      color: #9f9f9f;
+      font-size: 16px;
+      font-weight: 400;
     }
-   }
-
- .basement {
-  &__basement {
-    margin-top: 40px;
-    margin-bottom: 50px;
-    font-size: 16px;
-    font-weight: 400;
-  } 
-
-  &__hr {
-    border: 1px;
   }
- }
 
-  
+  .basement {
+    &__basement {
+      margin-top: 40px;
+      margin-bottom: 50px;
+      font-size: 16px;
+      font-weight: 400;
+    }
+
+    &__hr {
+      border: 1px;
+    }
+  }
 }
