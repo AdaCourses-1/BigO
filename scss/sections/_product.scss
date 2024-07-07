@@ -1,4 +1,6 @@
 .product {
+  padding-bottom: 150px;
+
   &__title {
     padding-top: 56px;
     text-align: center;
@@ -84,6 +86,8 @@
   }
 
   @media (max-width: 560px) {
+    padding-bottom: 75px;
+
     &__row {
       flex-wrap: wrap;
       gap: 20px;
