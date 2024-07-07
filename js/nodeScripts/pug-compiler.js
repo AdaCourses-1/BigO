@@ -12,27 +12,24 @@ const destDir = path.join(__dirname, "..", "..", "public");
 
 function pugCompiler() {
   function compilePugFile(filePath) {
-    const relativePath = path.relative(srcDir, filePath);
-    const destPath = path.join(
-      destDir,
-      relativePath.replace(/\.pug$/, ".html")
-    );
-    const destDirPath = path.dirname(destPath);
+    try {
+      const relativePath = path.relative(srcDir, filePath);
+      const destPath = path.join(destDir, relativePath.replace(/\.pug$/, ".html"));
+      const destDirPath = path.dirname(destPath);
 
-    if (!fs.existsSync(destDirPath)) {
-      fs.mkdirSync(destDirPath, { recursive: true });
+      if (!fs.existsSync(destDirPath)) {
+        fs.mkdirSync(destDirPath, { recursive: true });
+      }
+
+      const html = pug.renderFile(filePath);
+      fs.writeFileSync(destPath, html);
+      const fileName = path.basename(filePath);
+
+      console.log(green + `Компиляция файла ${fileName} в ${path.basename(destPath)} прошла успешно`);
+    } catch (err) {
+      const fileName = path.basename(filePath);
+      console.error(red + `Ошибка компиляции файла ${fileName}:`, err.message);
     }
-
-    const html = pug.renderFile(filePath);
-    fs.writeFileSync(destPath, html);
-    const fileName = path.basename(filePath);
-
-    console.log(
-      green +
-        `Компиляция файла ${fileName} в ${path.basename(
-          destPath
-        )} прошла успешно`
-    );
   }
 
   function compileAllPugFilesInDir(dir) {
@@ -75,10 +72,7 @@ function pugCompiler() {
     .on("unlink", (filePath) => {
       if (filePath.startsWith(srcDir)) {
         const relativePath = path.relative(srcDir, filePath);
-        const destPath = path.join(
-          destDir,
-          relativePath.replace(/\.pug$/, ".html")
-        );
+        const destPath = path.join(destDir, relativePath.replace(/\.pug$/, ".html"));
         if (fs.existsSync(destPath)) {
           fs.unlinkSync(destPath);
           console.log(`Удален ${destPath}`);
@@ -90,7 +84,7 @@ function pugCompiler() {
 }
 
 module.exports = {
-    startCompile: pugCompiler
+  startCompile: pugCompiler
 };
 
 console.log("Ожидание изменений Pug файлов...");
