@@ -449,6 +449,55 @@ img {
   }
 }
 
+.hero {
+  background-image: url(../../img/interiorhero.png);
+  height: calc(100vh - 100px);
+}
+.hero .container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.hero__arriwal {
+  padding: 62px 43px 37px 39px;
+  background-color: rgb(255, 243, 227);
+  border-radius: 10px;
+  max-width: 643px;
+  margin-top: 250px;
+}
+.hero__span {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: rgb(51, 51, 51);
+}
+.hero__h1title {
+  font-size: 52px;
+  font-weight: 700;
+  line-height: 65px;
+  color: rgb(184, 142, 47);
+}
+.hero__subtitle {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 24px;
+  color: rgb(51, 51, 51);
+}
+.hero__btn {
+  padding: 25px, 72px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  color: rgb(255, 255, 255);
+  background: rgb(184, 142, 47);
+  border-style: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.hero__btn:hover {
+  opacity: 0.8;
+}
+
 .range__title {
   padding-top: 56px;
   text-align: center;
