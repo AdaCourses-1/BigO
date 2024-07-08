@@ -574,6 +574,22 @@ img {
   }
 }
 
+.shop {
+  background: url("../../img/gridactions/background.png");
+}
+.shop__subtitle {
+  font-size: 48px;
+  font-weight: 500;
+}
+.shop__title {
+  font-size: 16px;
+  font-weight: 500;
+}
+.shop__suptitle {
+  font-size: 16px;
+  font-weight: 300;
+}
+
 .product {
   padding-bottom: 150px;
 }
