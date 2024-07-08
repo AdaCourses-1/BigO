@@ -53,7 +53,6 @@
     left: 45px;
     color: #b88e2f;
     text-decoration: none;
-
     padding: 12px 55px;
     background-color: #fff;
     transform: translateY(50%) scale(0);
@@ -82,7 +81,6 @@
     display: flex;
     color: #fff;
     background-color: #2ec1ac;
-
     background: none;
   }
 
@@ -114,6 +112,7 @@
       }
     }
   }
+
   &__el::before {
     position: absolute;
     left: 0;
