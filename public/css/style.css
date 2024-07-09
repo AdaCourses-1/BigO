@@ -635,6 +635,11 @@ img {
   font-weight: 400;
   color: #9F9F9F;
 }
+@media (max-width: 560px) {
+  .recent-posts .container {
+    padding: 0;
+  }
+}
 
 .hero {
   background: url("../img/interiorhero.png") no-repeat center;
@@ -816,6 +821,8 @@ img {
 @media (max-width: 560px) {
   .blog-container {
     padding: 50px 20px 50px;
+    flex-direction: column;
+    gap: 50px;
   }
 }
 

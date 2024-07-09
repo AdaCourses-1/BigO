@@ -30,4 +30,10 @@
         font-weight: 400;
         color: #9F9F9F;
     }
+
+    .container {
+        @include mobile {
+            padding: 0;
+        }
+    }
 }
