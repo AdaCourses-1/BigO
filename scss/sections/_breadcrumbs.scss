@@ -1,32 +1,36 @@
 .breadcrumbs{
-    background: url('../../img/gridactions/background.png');
-   
+    background: url('../../img/gridactions/background.png') no-repeat center;
+    background-size: cover;
 
     .container{
-        max-width: 1240px;
+        max-width: 100%;
         height: 316px;
-    }
-    &__subtitle{
-        padding-top: 121px;
-        font-size: 48px;
-        font-weight: 500;
+    }   
+    
+    &__content{
+        padding-top: 60px;
         text-align: center;
+        padding-bottom: 106px;
     }
 
-    &__row{
+    &__list{
         display: flex;
         justify-content: center;
-        padding-top: 20px;
+        padding-top: 10px;
     }
 
     &__title{
+        font-size: 48px;
+        font-weight: 500;
+    }
+
+    &__prev-page{
         font-size: 16px;
         font-weight: 500;
     }
 
-    &__suptitle{
+    &__page{
         font-size: 16px;
         font-weight: 300;
     }
-
 }
