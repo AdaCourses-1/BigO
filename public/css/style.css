@@ -577,9 +577,20 @@ img {
 .shop {
   background: url("../../img/gridactions/background.png");
 }
+.shop .container {
+  max-width: 1240px;
+  height: 316px;
+}
 .shop__subtitle {
+  padding-top: 121px;
   font-size: 48px;
   font-weight: 500;
+  text-align: center;
+}
+.shop__row {
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
 }
 .shop__title {
   font-size: 16px;

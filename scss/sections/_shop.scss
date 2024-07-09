@@ -1,9 +1,22 @@
 .shop{
     background: url('../../img/gridactions/background.png');
+   
 
+    .container{
+        max-width: 1240px;
+        height: 316px;
+    }
     &__subtitle{
+        padding-top: 121px;
         font-size: 48px;
         font-weight: 500;
+        text-align: center;
+    }
+
+    &__row{
+        display: flex;
+        justify-content: center;
+        padding-top: 20px;
     }
 
     &__title{
