@@ -771,6 +771,15 @@ img {
   font-weight: 300;
 }
 
+.shop-products {
+  padding: 60px 0 85px;
+}
+.shop-products__row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
 .blog-container {
   display: flex;
   justify-content: space-between;
