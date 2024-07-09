@@ -15,9 +15,6 @@
         "browser-sync": "^2.27.7",
         "chokidar": "^3.6.0",
         "nodemon": "^3.1.4",
-        "sass": "^1.77.6",
-        "stylelint": "^16.6.1",
-        "stylelint-config-standard": "^36.0.1",
-        "stylelint-config-standard-scss": "^13.1.0"
+        "sass": "^1.77.6"
     }
 }
