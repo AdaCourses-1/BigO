@@ -2,6 +2,7 @@
 
 // Компоненты сайта
 @import './components/buttons';
+@import './components/product';
 @import "./components/header";
 @import "./components/footer";
 @import "./components/advantages";
@@ -9,7 +10,7 @@
 // Секции сайта
 @import './sections/hero';
 @import "./sections/range";
-@import "./sections/product";
+@import "./sections/our-products";
 
 // Страницы сайта
 @import "./pages/blog";
