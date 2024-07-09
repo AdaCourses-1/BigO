@@ -768,6 +768,10 @@ img {
   }
 }
 
+.form__title, .form__desc {
+  text-align: center;
+}
+
 .blog-container {
   display: flex;
   justify-content: space-between;
