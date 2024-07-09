@@ -205,6 +205,148 @@ img {
   border-color: #B88E2F;
 }
 
+.product {
+  position: relative;
+  z-index: 5;
+  background-color: #f4f5f7;
+}
+.product:hover .product__btn {
+  transform: translateY(0%) scale(1);
+}
+.product:hover .product__list {
+  transform: translateY(0%) scale(1);
+}
+.product:hover::before {
+  opacity: 1;
+}
+.product::before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(58, 58, 58, 0.6);
+  opacity: 0;
+  transition: 0.3s;
+  content: "";
+}
+.product__subtitle {
+  font-size: 24px;
+  font-weight: 600;
+  color: #020202;
+  padding: 16px 0 0 16px;
+}
+.product__info {
+  font-size: 16px;
+  font-weight: 500;
+  color: #898989;
+  padding: 8px 0 0 16px;
+}
+.product__prices {
+  display: flex;
+}
+.product__price {
+  font-size: 20px;
+  font-weight: 600;
+  color: #020202;
+}
+.product__old-price {
+  font-size: 16px;
+  font-weight: 500;
+  color: #898989;
+}
+.product__product__inner {
+  position: absolute;
+}
+.product__btn {
+  position: absolute;
+  top: 175px;
+  left: 45px;
+  color: #b88e2f;
+  text-decoration: none;
+  padding: 12px 55px;
+  background-color: #fff;
+  transform: translateY(50%) scale(0);
+  transition: 0.3s;
+}
+.product__icon {
+  padding-right: 2px;
+}
+.product__list {
+  display: flex;
+  gap: 20px;
+  position: absolute;
+  top: 247px;
+  left: 16px;
+  z-index: 3;
+  color: #fff;
+  padding-right: 10px;
+  transform: translateY(50%) scale(0);
+  transition: 0.3s;
+  background: none;
+}
+.product__item {
+  display: flex;
+  color: #fff;
+  background-color: #2ec1ac;
+  background: none;
+}
+.product__link {
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  background-color: #2ec1ac;
+  text-decoration: none;
+  background: none;
+}
+.product__teg {
+  right: 24px;
+  top: 24px;
+  position: absolute;
+  height: 48px;
+  width: 48px;
+  border-radius: 50%;
+  background-color: #e97171;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.product__teg-g {
+  right: 24px;
+  top: 24px;
+  position: absolute;
+  height: 48px;
+  width: 48px;
+  border-radius: 50%;
+  background-color: #2ec1ac;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.product__teg-price {
+  color: #f4f5f7;
+}
+.product__prices {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px 15px 15px;
+  gap: 10px;
+}
+@media (max-width: 560px) {
+  .product {
+    width: 100%;
+  }
+  .product__img {
+    width: 100%;
+  }
+  .product__btn {
+    left: 25%;
+  }
+  .product__list {
+    left: 15%;
+  }
+}
+
 .header {
   padding: 30px 0;
 }
@@ -574,6 +716,30 @@ img {
   }
 }
 
+.our-products {
+  padding-bottom: 150px;
+}
+.our-products__title {
+  padding-top: 56px;
+  text-align: center;
+  font-size: 32px;
+  font-weight: 700;
+}
+.our-products__row {
+  padding-top: 32px;
+  display: flex;
+  gap: 32px;
+}
+@media (max-width: 560px) {
+  .our-products {
+    padding-bottom: 75px;
+  }
+  .our-products__row {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+}
+
 .breadcrumbs {
   background: url("../img/background.png") no-repeat center;
   background-size: cover;
@@ -603,169 +769,6 @@ img {
 .breadcrumbs__page {
   font-size: 16px;
   font-weight: 300;
-}
-
-.product {
-  padding-bottom: 150px;
-}
-.product__title {
-  padding-top: 56px;
-  text-align: center;
-  font-size: 32px;
-  font-weight: 700;
-}
-.product__row {
-  padding-top: 32px;
-  display: flex;
-  gap: 32px;
-}
-.product__subtitle {
-  font-size: 24px;
-  font-weight: 600;
-  color: #020202;
-  padding: 16px 0 0 16px;
-}
-.product__info {
-  font-size: 16px;
-  font-weight: 500;
-  color: #898989;
-  padding: 8px 0 0 16px;
-}
-.product__prices {
-  display: flex;
-}
-.product__price {
-  font-size: 20px;
-  font-weight: 600;
-  color: #020202;
-}
-.product__old-price {
-  font-size: 16px;
-  font-weight: 500;
-  color: #898989;
-}
-.product__product__inner {
-  position: absolute;
-}
-.product__btn {
-  position: absolute;
-  top: 175px;
-  left: 45px;
-  color: #b88e2f;
-  text-decoration: none;
-  padding: 12px 55px;
-  background-color: #fff;
-  transform: translateY(50%) scale(0);
-  transition: 0.3s;
-}
-.product__icon {
-  padding-right: 2px;
-}
-.product__list {
-  display: flex;
-  gap: 20px;
-  position: absolute;
-  top: 247px;
-  left: 16px;
-  z-index: 3;
-  color: #fff;
-  padding-right: 10px;
-  transform: translateY(50%) scale(0);
-  transition: 0.3s;
-  background: none;
-}
-.product__item {
-  display: flex;
-  color: #fff;
-  background-color: #2ec1ac;
-  background: none;
-}
-.product__link {
-  font-size: 16px;
-  font-weight: 600;
-  color: #fff;
-  background-color: #2ec1ac;
-  text-decoration: none;
-  background: none;
-}
-.product__el {
-  position: relative;
-  z-index: 5;
-  background-color: #f4f5f7;
-}
-.product__el:hover .product__btn {
-  transform: translateY(0%) scale(1);
-}
-.product__el:hover .product__list {
-  transform: translateY(0%) scale(1);
-}
-.product__el:hover::before {
-  opacity: 1;
-}
-.product__el::before {
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  background: rgba(58, 58, 58, 0.6);
-  opacity: 0;
-  transition: 0.3s;
-  content: "";
-}
-.product__teg {
-  right: 24px;
-  top: 24px;
-  position: absolute;
-  height: 48px;
-  width: 48px;
-  border-radius: 50%;
-  background-color: #e97171;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.product__teg-g {
-  right: 24px;
-  top: 24px;
-  position: absolute;
-  height: 48px;
-  width: 48px;
-  border-radius: 50%;
-  background-color: #2ec1ac;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.product__teg-price {
-  color: #f4f5f7;
-}
-.product__prices {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 10px 15px 15px;
-  gap: 10px;
-}
-@media (max-width: 560px) {
-  .product {
-    padding-bottom: 75px;
-  }
-  .product__row {
-    flex-wrap: wrap;
-    gap: 20px;
-  }
-  .product__el {
-    width: 100%;
-  }
-  .product__img {
-    width: 100%;
-  }
-  .product__btn {
-    left: 25%;
-  }
-  .product__list {
-    left: 15%;
-  }
 }
 
 .blog-container {
