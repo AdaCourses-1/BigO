@@ -4,7 +4,7 @@
     "main": "app.js",
     "scripts": {
         "start": "concurrently \"nodemon --watch views --watch js/index.js --exec node js/index.js\" \"npm run serve\" \"npm run app\"",
-        "serve": "browser-sync start --proxy http://localhost:3001 --files 'public/**/*'",
+        "serve": "browser-sync start --proxy http://localhost:3000 --files 'public/**/*'",
         "app": "node js/app.js"
     },
     "dependencies": {
