@@ -2,5 +2,6 @@ extends ../layouts/layout.pug
 
 block content
     main(data-barba="container" data-barba-namespace="comparison")
+        include ../mixins/breadcrumbs.pug
         +breadcrumbs('Product Comparison', 'Product Comparison')
         include ../components/advantages.pug
