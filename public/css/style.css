@@ -771,6 +771,12 @@ img {
 .blog-container {
   display: flex;
   justify-content: space-between;
+  padding: 100px 0 60px;
+}
+@media (max-width: 560px) {
+  .blog-container {
+    padding: 50px 20px 50px;
+  }
 }
 
 .posts {
