@@ -3,8 +3,8 @@
     "version": "1.0.0",
     "main": "app.js",
     "scripts": {
-        "start": "concurrently \"npm run serve\" \"nodemon js/index.js --watch views --watch js --watch public --watch scss\"",
-        "serve": "browser-sync start --proxy http://localhost:8080 --files public/**/*, views/**/*, js/**/*, scss/**/*"
+        "start": "concurrently \"nodemon js/index.js\" \"npm run serve --watch views --watch js --watch public --watch scss\"",
+        "serve": "browser-sync start --proxy http://localhost:2020 --port=3000 --files public/**/*, views/**/*, js/**/*, scss/**/*"
     },
     "dependencies": {
         "express": "^4.19.2",
