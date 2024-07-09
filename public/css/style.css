@@ -608,6 +608,38 @@ img {
   }
 }
 
+.container {
+  margin-top: 16px;
+}
+
+.recent-posts__title {
+  padding-bottom: 26px;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 36px;
+  text-align: left;
+}
+.recent-posts__row {
+  display: flex;
+  align-items: center;
+  padding-bottom: 39px;
+}
+.recent-posts__img {
+  padding-right: 12px;
+}
+.recent-posts__subtitle {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  max-width: 160px;
+}
+.recent-posts__date {
+  padding-top: 5px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #9F9F9F;
+}
+
 .hero {
   background: url("../img/interiorhero.png") no-repeat center;
   background-attachment: fixed;
@@ -662,38 +694,6 @@ img {
     line-height: 1.3;
     margin: 10px 0 30px;
   }
-}
-
-.container {
-  margin-top: 16px;
-}
-
-.recent-posts__title {
-  padding-bottom: 26px;
-  font-size: 24px;
-  font-weight: 500;
-  line-height: 36px;
-  text-align: left;
-}
-.recent-posts__row {
-  display: flex;
-  align-items: center;
-  padding-bottom: 39px;
-}
-.recent-posts__img {
-  padding-right: 12px;
-}
-.recent-posts__subtitle {
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 21px;
-  max-width: 160px;
-}
-.recent-posts__date {
-  padding-top: 5px;
-  font-size: 14px;
-  font-weight: 400;
-  color: #9F9F9F;
 }
 
 .range__title {
