@@ -574,6 +574,32 @@ img {
   }
 }
 
+.cart__row {
+  padding-top: 72px;
+  display: flex;
+  justify-content: space-between;
+}
+.cart__column {
+  max-width: 60%;
+  max-height: 40%;
+}
+.cart__info {
+  background-color: #F9F1E7;
+}
+.cart__tab {
+  padding: 15px;
+  font-weight: 500;
+  font-size: 16px;
+  display: flex;
+  justify-content: space-around;
+}
+.cart__item--description {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 55px;
+  color: #9F9F9F;
+}
+
 .breadcrumbs {
   background: url("../img/background.png") no-repeat center;
   background-size: cover;

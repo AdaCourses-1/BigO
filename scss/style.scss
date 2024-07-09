@@ -1,4 +1,6 @@
 @import "./base";
+//переменный цветов
+@import './variables';
 
 // Компоненты сайта
 @import './components/buttons';
@@ -9,6 +11,7 @@
 // Секции сайта
 @import './sections/hero';
 @import "./sections/range";
+@import "./sections/_cart";
 @import "./sections/breadcrumbs";
 @import "./sections/product";
 
