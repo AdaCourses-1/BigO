@@ -92,5 +92,6 @@ function buildImgFiles() {
 
 
 module.exports = {
-    buildImgFiles
+    buildImgFiles,
+    srcDir: sourceDir
 }

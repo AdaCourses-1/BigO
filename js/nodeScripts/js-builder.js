@@ -63,4 +63,5 @@ function startBuilding() {
 
 module.exports = {
   startBuilding,
+  srcDir: sourceDir
 };

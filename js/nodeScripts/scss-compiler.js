@@ -67,4 +67,5 @@ function startCompilseSass() {
 
 module.exports = {
   startCompile: startCompilseSass,
+  srcDir: inputFilePath,
 };
