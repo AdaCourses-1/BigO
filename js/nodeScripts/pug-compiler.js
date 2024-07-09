@@ -84,7 +84,8 @@ function pugCompiler() {
 }
 
 module.exports = {
-  startCompile: pugCompiler
+  startCompile: pugCompiler,
+  srcDir
 };
 
 console.log("Ожидание изменений Pug файлов...");
