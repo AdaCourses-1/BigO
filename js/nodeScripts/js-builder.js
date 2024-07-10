@@ -19,12 +19,6 @@ function startBuilding() {
           `Ошибка копирования файла ${srcFile} в ${destFile}:`,
           err
         );
-      } else {
-        console.log(
-          `Файл ${path.basename(
-            srcFile
-          )} успешно скопирован в папку public/js/${path.basename(destFile)}`
-        );
       }
     });
   };
@@ -52,7 +46,6 @@ function startBuilding() {
           if (err) {
             console.error(`Ошибка удаления файла ${destFile}:`, err);
           } else {
-            console.log(`Файл ${destFile} успешно удален`);
           }
         });
       }
@@ -63,4 +56,5 @@ function startBuilding() {
 
 module.exports = {
   startBuilding,
+  srcDir: sourceDir,
 };

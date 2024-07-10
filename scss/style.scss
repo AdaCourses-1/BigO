@@ -1,16 +1,29 @@
 @import "./base";
 
 // Компоненты сайта
+<<<<<<< HEAD
 @import "./components/buttons";
+=======
+@import './components/buttons';
+@import './components/product';
+>>>>>>> 455f964ee49180d0fef38766108a763ce4bc1beb
 @import "./components/header";
 @import "./components/footer";
 @import "./components/advantages";
+@import "./components/cart-modal";
 
 // Секции сайта
 @import "./sections/hero";
 @import "./sections/range";
+<<<<<<< HEAD
 @import "./sections/product";
 @import "./sections/prod-info";
+=======
+@import "./sections/our-products";
+@import "./sections/breadcrumbs";
+@import './sections/shop-products';
+@import "./sections/recent-posts";
+>>>>>>> 455f964ee49180d0fef38766108a763ce4bc1beb
 
 // Страницы сайта
 @import "./pages/blog";
