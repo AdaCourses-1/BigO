@@ -52,13 +52,13 @@
   }
 
   .block {
-    display: none; /* Скрыть блоки по умолчанию */
+    display: none;
     padding: 10px;
 
     margin-bottom: 10px;
   }
 
   .active {
-    display: block; /* Показать активный блок */
+    display: block;
   }
 }

@@ -1124,12 +1124,12 @@ img {
   padding-right: 30px;
 }
 .prod-info .block {
-  display: none; /* Скрыть блоки по умолчанию */
+  display: none;
   padding: 10px;
   margin-bottom: 10px;
 }
 .prod-info .active {
-  display: block; /* Показать активный блок */
+  display: block;
 }
 
 .blog-container {
