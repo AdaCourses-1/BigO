@@ -30,8 +30,6 @@ function buildImgFiles() {
             `Ошибка копирования файла ${srcFile} в ${destFile}:`,
             err
           );
-        } else {
-          console.log(`Файл ${srcFile} успешно скопирован в ${destFile}`);
         }
       });
     } catch (err) {
@@ -92,5 +90,6 @@ function buildImgFiles() {
 
 
 module.exports = {
-    buildImgFiles
+    buildImgFiles,
+    srcDir: sourceDir
 }
