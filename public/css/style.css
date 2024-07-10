@@ -193,6 +193,15 @@ img {
   max-width: 100%;
 }
 
+.col-5 {
+  width: 41.66%;
+}
+@media (max-width: 560px) {
+  .col-5 {
+    width: 100%;
+  }
+}
+
 .button-orange {
   font-size: 16px;
   font-weight: 700;
@@ -203,6 +212,7 @@ img {
   outline: none;
   cursor: pointer;
   transition: 0.3s;
+  border-radius: 5px;
 }
 .button-orange:hover {
   background-color: #fff;
@@ -1036,7 +1046,7 @@ img {
 }
 
 .form {
-  margin-top: 98px;
+  padding: 100px 0;
 }
 .form__title, .form__desc {
   text-align: center;
@@ -1047,9 +1057,11 @@ img {
   font-weight: 600;
 }
 .form__desc {
+  font-size: 16px;
   margin: auto;
   max-width: 644px;
   color: #9f9f9f;
+  line-height: 1.5;
 }
 .form .adress-icon {
   margin-bottom: 50px;
@@ -1064,8 +1076,19 @@ img {
   display: flex;
   gap: 130px;
 }
+@media (max-width: 560px) {
+  .form .row {
+    flex-direction: column;
+    gap: 50px;
+  }
+}
 .form .column-information {
   margin-top: 119px;
+}
+@media (max-width: 560px) {
+  .form .column-information {
+    margin-top: 50px;
+  }
 }
 .form .adress {
   display: flex;
@@ -1097,9 +1120,14 @@ img {
 }
 .form .column-input {
   margin-top: 119px;
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
 }
-.form .input-name {
-  width: 528px;
+@media (max-width: 560px) {
+  .form .column-input {
+    margin-top: 0;
+  }
 }
 .form .input-name__input {
   margin-top: 22px;
@@ -1108,38 +1136,36 @@ img {
   border: 1px solid #9F9F9F;
   border-radius: 10px;
   color: #9F9F9F;
+  box-sizing: border-box;
+}
+@media (max-width: 560px) {
+  .form .input-name__input {
+    margin-top: 10px;
+    padding: 20px 15px;
+  }
 }
 .form .input-name {
   font-size: 16px;
   font-weight: 500;
-  margin-bottom: 36px;
 }
 .form #input {
   margin-top: 22px;
-  padding: 30px 25px 70px;
+  padding: 30px 25px;
+  box-sizing: border-box;
   width: 100%;
   border: 1px solid #9F9F9F;
   border-radius: 10px;
   color: #9F9F9F;
+  min-height: 120px;
 }
-.form .button {
-  margin-top: 49px;
-  margin-bottom: 63px;
-  font-size: 16px;
-  font-weight: 700;
-  color: #fff;
-  padding: 18px 89px;
-  background-color: #B88E2F;
-  border: 2px solid transparent;
-  border-radius: 5px;
-  outline: none;
-  cursor: pointer;
-  transition: 0.3s;
+@media (max-width: 560px) {
+  .form #input {
+    margin-top: 10px;
+    padding: 20px 15px;
+  }
 }
-.form .button:hover {
-  background-color: #fff;
-  color: #B88E2F;
-  border-color: #B88E2F;
+.form .form__bottom {
+  align-self: baseline;
 }
 
 .blog-container {
