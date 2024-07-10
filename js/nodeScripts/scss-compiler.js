@@ -25,8 +25,6 @@ function startCompilseSass() {
           fs.writeFile(outputFilePath, result.css, (err) => {
             if (err) {
               console.error(err);
-            } else {
-              console.log("SCSS compiled successfully.");
             }
           });
 
@@ -34,8 +32,6 @@ function startCompilseSass() {
             fs.writeFile(`${outputFilePath}.map`, result.map, (err) => {
               if (err) {
                 console.error(err);
-              } else {
-                console.log("Source map generated successfully.");
               }
             });
           }
@@ -51,9 +47,8 @@ function startCompilseSass() {
   });
 
   watcher
-    .on("add", (filePath) => console.log(`File ${filePath} has been added.`))
+    .on("add", (filePath) => {})
     .on("change", (filePath) => {
-      console.log(`File ${filePath} has been changed. Recompiling SCSS...`);
       compileSass();
     })
     .on("unlink", (filePath) =>

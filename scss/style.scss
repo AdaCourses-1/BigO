@@ -6,7 +6,7 @@
 @import "./components/header";
 @import "./components/footer";
 @import "./components/advantages";
-@import "./sections/recent-posts";
+@import "./components/cart-modal";
 
 // Секции сайта
 @import './sections/hero';
@@ -14,6 +14,7 @@
 @import "./sections/our-products";
 @import "./sections/breadcrumbs";
 @import './sections/shop-products';
+@import "./sections/recent-posts";
 
 // Страницы сайта
 @import "./pages/blog";

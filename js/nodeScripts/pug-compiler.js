@@ -22,10 +22,9 @@ function pugCompiler() {
       }
 
       const html = pug.renderFile(filePath);
+      
       fs.writeFileSync(destPath, html);
-      const fileName = path.basename(filePath);
 
-      console.log(green + `Компиляция файла ${fileName} в ${path.basename(destPath)} прошла успешно`);
     } catch (err) {
       const fileName = path.basename(filePath);
       console.error(red + `Ошибка компиляции файла ${fileName}:`, err.message);
