@@ -13,34 +13,35 @@ scss.startCompile();
 js.startBuilding();
 img.buildImgFiles();
 
-const publicSrc = path.join(__dirname, "..", "..", "public");
+const publicSrc = path.join(__dirname, "..", "public");
 
-const watcher = chokidar.watch(
-  [pug.srcDir, js.srcDir, publicSrc, scss.srcDir],
-  {
-    persistent: true,
-  }
-);
+// const watcher = chokidar.watch(
+//   [pug.srcDir, js.srcDir, publicSrc, scss.srcDir],
+//   {
+//     persistent: true,
+//   }
+// );
 
-watcher.on("change", (path) => {
-  console.log(`File ${path} has been changed`);
+// watcher.on("change", (path) => {
+//   console.log(`File ${path} has been changed`);
 
-  if (path.endsWith(".pug")) {
-    pug.startCompile();
-  } else if (path.endsWith(".scss")) {
-    scss.startCompile();
-  } else if (path.endsWith(".js")) {
-    js.startBuilding();
-  } else if (
-    path.endsWith(".png") ||
-    path.endsWith(".jpg") ||
-    path.endsWith(".jpeg") ||
-    path.endsWith(".svg")
-  ) {
-    img.buildImgFiles();
-  }
-});
+//   console.log(path)
 
+//   if (path.endsWith(".pug")) {
+//     pug.startCompile();
+//   } else if (path.endsWith(".scss")) {
+//     scss.startCompile();
+//   } else if (path.endsWith(".js")) {
+//     js.startBuilding();
+//   } else if (
+//     path.endsWith(".png") ||
+//     path.endsWith(".jpg") ||
+//     path.endsWith(".jpeg") ||
+//     path.endsWith(".svg")
+//   ) {
+//     img.buildImgFiles();
+//   }
+// });
 
 // Укажите путь к статическим файлам
 app.use(express.static(path.join(__dirname, "..", "public")));

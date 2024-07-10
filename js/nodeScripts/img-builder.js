@@ -30,8 +30,6 @@ function buildImgFiles() {
             `Ошибка копирования файла ${srcFile} в ${destFile}:`,
             err
           );
-        } else {
-          console.log(`Файл ${path.basename(srcFile)} успешно скопирован в ${path.basename(destFile)}`);
         }
       });
     } catch (err) {
