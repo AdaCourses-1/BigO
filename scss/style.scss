@@ -1,15 +1,16 @@
 @import "./base";
 
 // Компоненты сайта
-@import './components/buttons';
+@import "./components/buttons";
 @import "./components/header";
 @import "./components/footer";
 @import "./components/advantages";
 
 // Секции сайта
-@import './sections/hero';
+@import "./sections/hero";
 @import "./sections/range";
 @import "./sections/product";
+@import "./sections/prod-info";
 
 // Страницы сайта
 @import "./pages/blog";
