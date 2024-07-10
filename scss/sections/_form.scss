@@ -70,10 +70,40 @@
       width: 100%;
       border: 1px solid #9F9F9F;
       border-radius: 10px;
+      color: #9F9F9F;
     }
   }
   .input-name {
     font-size: 16px;
       font-weight: 500;
+      margin-bottom: 36px;
   }
+  #input {
+    margin-top: 22px;
+      padding: 30px 25px 70px;
+      width: 100%;
+      border: 1px solid #9F9F9F;
+      border-radius: 10px;
+      color: #9F9F9F;
+  }
+  .button {
+    margin-top: 49px;
+    margin-bottom: 63px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #fff;
+    padding: 18px 89px;
+    background-color: #B88E2F;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+    transition: 0.3s;
+
+    &:hover {
+        background-color: #fff;
+        color: #B88E2F;
+        border-color: #B88E2F;
+    }
+}
 }
