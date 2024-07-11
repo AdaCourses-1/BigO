@@ -675,6 +675,35 @@ img {
   }
 }
 
+.definition-lists__buttons {
+  display: flex;
+  cursor: pointer;
+  gap: 38px;
+}
+.definition-lists__button-prev-text, .definition-lists__button-text, .definition-lists__button-next-text {
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 30px;
+  color: black;
+  background-color: #F9F1E7;
+  border-radius: 10px;
+  padding: 15px 28px;
+  transition: 0.3s;
+}
+.definition-lists__button-prev-text.active, .definition-lists__button-text.active, .definition-lists__button-next-text.active {
+  background-color: #B88E2F;
+  color: #fff;
+}
+.definition-lists__button-prev-text.active:hover, .definition-lists__button-text.active:hover, .definition-lists__button-next-text.active:hover {
+  opacity: 1;
+}
+.definition-lists__button-prev-text:hover, .definition-lists__button-text:hover, .definition-lists__button-next-text:hover {
+  opacity: 0.6;
+}
+.definition-lists__button-prev-text, .definition-lists__button-next-text {
+  padding: 15px 28px;
+}
+
 .cart-modal {
   position: fixed;
   top: 0;
