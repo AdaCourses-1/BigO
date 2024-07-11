@@ -655,6 +655,18 @@ img {
   width: 98px;
   color: #F9F1E7;
 }
+.definition-lists__button-prev-text, .definition-lists__button-text, .definition-lists__button-next-text {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 30px;
+  text-align: left;
+}
+.definition-lists__button-prev-text, .definition-lists__button-next-text {
+  width: 98px;
+}
+.definition-lists__button-text {
+  width: 60px;
+}
 
 .hero {
   background: url("../img/interiorhero.png") no-repeat center;
