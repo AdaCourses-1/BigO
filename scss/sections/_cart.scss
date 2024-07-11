@@ -24,12 +24,12 @@
     font-weight: 500;
     font-size: 16px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
   }
 
   &__item--description {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     padding-top: 55px;
     color: $text_color_gray;
@@ -56,10 +56,10 @@
   }
 
   &__subtotal--info{
-  display: grid;
-  grid-template-columns: repeat(2, auto);
-  padding-bottom: 31px;
-  padding-top: 61px;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    padding-bottom: 31px;
+    padding-top: 61px;
   }
 
   &__total--info{
