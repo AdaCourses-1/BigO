@@ -1,7 +1,7 @@
 extends ../layouts/layout.pug
 
 block content
-    main(data-barba="container" data-barba-namespace="cart")
+    main
         include ../mixins/breadcrumbs.pug
         +breadcrumbs('Cart', 'Cart')
         include ../components/advantages.pug
