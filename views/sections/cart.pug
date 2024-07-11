@@ -15,11 +15,13 @@ section.cart
               p.cart__item--price Rs. 250,000.00
               p.cart__item--quantity 1
               p.cart__item--subtotal Rs. 250,000.00
-              img.cart__img(src='./img/delete.svg' alt='delete cart')
+              img.cart__delete(src='./img/delete.svg' alt='delete cart')
           .cart__totals--column
               h1.cart__totals--title Cart Totals
-              p.cart__totals--subtotal Subtotal
-              p.cart__totals--price Rs. 250,000.00
-              p.cart__totals Total
-              p.cart__total--totalprice Rs. 250,000.00
+              .cart__subtotal--info
+                 p.cart__totals--subtotal Subtotal
+                 p.cart__totals--price Rs. 250,000.00
+              .cart__total--info
+                 p.cart__totals Total
+                 p.cart__total--totalprice Rs. 250,000.00
               button.cart__checkout Check Out 
