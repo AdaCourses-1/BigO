@@ -1,4 +1,10 @@
 extends ../layouts/layout.pug
 
 block content
-    section
+    main(data-barba="container" data-barba-namespace="home")
+        include ../sections/hero.pug
+        include ../sections/range.pug
+        include ../sections/product.pug
+        include ../components/advantages.pug
+
+
