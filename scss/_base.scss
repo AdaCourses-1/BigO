@@ -15,8 +15,22 @@
 body {
     font-family: "Poppins", sans-serif;
     font-style: normal;
+    overflow-x: hidden;
+
+    &.hide-overlow {
+        overflow: hidden;
+        padding-right: 18px;
+    }
 }
 
 img {
     max-width: 100%;
+}
+
+.col-5 {
+    width: 41.66%;
+
+    @include mobile {
+        width: 100%;
+    }
 }
