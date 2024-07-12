@@ -225,6 +225,7 @@ img {
   position: relative;
   z-index: 5;
   background-color: #f4f5f7;
+  width: 23%;
 }
 .product:hover .product__btn {
   transform: translateY(0%) scale(1);
@@ -1032,7 +1033,8 @@ img {
 .our-products__row {
   padding-top: 32px;
   display: flex;
-  gap: 32px;
+  flex-wrap: wrap;
+  gap: 25px;
 }
 @media (max-width: 560px) {
   .our-products {
