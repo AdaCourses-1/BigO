@@ -15,7 +15,7 @@
     max-height: 40%;
   }
 
-  &__info {
+  &__info-item {
     background-color: $light_beige_background;
   }
 
@@ -27,7 +27,7 @@
     justify-content: space-between;
   }
 
-  &__item--description {
+  &__item {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -35,7 +35,7 @@
     color: $text_color_gray;
   }
 
-  &__img {
+  &__img{
     background: $light_beige_background;
     border-radius: 10px;
   }
@@ -47,7 +47,7 @@
     margin-bottom: 50px;
   }
 
-  &__totals--column{
+  &__total-column{
     background-color: $light_beige_background;
     max-width: 393px;
     max-height: 390px;
@@ -55,44 +55,45 @@
     margin-bottom: 40px;
   }
 
-  &__subtotal--info{
+  &__price-info{
     display: grid;
     grid-template-columns: repeat(2, auto);
     padding-bottom: 31px;
     padding-top: 61px;
   }
 
-  &__total--info{
+  &__final-info{
     display: grid;
     grid-template-columns: repeat(2, auto);
     padding-bottom: 42px;
     }
 
-  &__totals--title{
+  &__total-title{
     padding: 15px 118px 0  96px ;
     font-size: 32px;
     font-weight: 600;
     line-height: 48px;
   }
-  &__totals--subtotal{
+
+  &__price-title{
     font-size: 16px;
     font-weight: 500;
     line-height: 24px;
   }
 
-  &__totals--price{
+  &__price{
     font-size: 16px;
     font-weight: 400;
     color: $text_color_gray;
   }
   
-  &____totals{
+  &__final-title{
     font-size: 16px;
     font-weight: 500;
     line-height: 24px;
   }
 
-  &__total--totalprice{
+  &__final-price{
    font-size: 20px;
    font-weight: 500;
    color: $text_color_beige;
