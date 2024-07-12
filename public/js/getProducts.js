@@ -86,6 +86,8 @@ async function renderProducts() {
           };
 
           cartItems.push(cartItem);
+
+          sessionStorage.setItem("cart-items", JSON.stringify(cartItems));
         }
       });
     });

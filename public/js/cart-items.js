@@ -1,5 +1,11 @@
 export let cartItems = []; // Наши товары которые будут показывается в корзине
 
+const savedProducts = sessionStorage.getItem("cart-items");
+
+if (savedProducts) {
+  cartItems = JSON.parse(savedProducts);
+}
+
 const cartModalIcons = document.querySelectorAll(".cart-modal-icon");
 const cartWrapper = document.getElementById("cart-modal__items"); // ГДЕ, в каком блоке появятся товары
 
