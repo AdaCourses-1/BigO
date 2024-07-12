@@ -2,13 +2,12 @@
   max-width: 251px;
 
     &__write-inside {
-        width: 100%;
-        display: flex;
-        align-items: center;
-        height: 50px;
-        border-radius: 10px;
-        border: 1px solid rgba(159, 159, 159, 1);
-    
+      width: 100%;
+      display: flex;
+      align-items: center;
+      height: 50px;
+      border-radius: 10px;
+      border: 1px solid rgba(159, 159, 159, 1);
     }
 
   &__search {
