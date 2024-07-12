@@ -1,4 +1,7 @@
 extends ../layouts/layout.pug
 
 block content
-    section
+    main
+        include ../mixins/breadcrumbs.pug
+        +breadcrumbs('Cart', 'Cart')
+        include ../components/advantages.pug
