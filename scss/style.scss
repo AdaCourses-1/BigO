@@ -1,6 +1,6 @@
 @import "./base";
 //переменный цветов
-@import './variables';
+@import "./variables";
 
 // Компоненты сайта
 @import "./components/buttons";
@@ -12,15 +12,16 @@
 @import "./components/cart-modal";
 
 // Секции сайта
-@import './sections/hero';
+@import "./sections/hero";
 @import "./sections/range";
 @import "./sections/our-products";
 @import "./sections/breadcrumbs";
-@import './sections/shop-products';
+@import "./sections/shop-products";
 @import "./sections/recent-posts";
 @import "./sections/prod-info";
 @import "./sections/form";
-@import './sections/cart';
+@import "./sections/cart";
+@import "./sections/billing-details";
 
 // Страницы сайта
 @import "./pages/blog";

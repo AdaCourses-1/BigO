@@ -1,0 +1,84 @@
+section.billing-details
+  .container
+    h4.billing-details__title  Billing details
+
+    .row 
+
+      .column-input.col-5 
+        .input-names 
+          .top
+            h3.input-names__title First Name
+            input.input-names__input-top(type="text")
+          .top
+            h3.input-names__title Last Name
+            input.input-names__input-top(type="text")
+        .input-name 
+          h3.input-name__title Company Name (Optional)
+          input.input-name__input(type="text")
+        .input-name 
+          h3.input-name__title Country / Region
+          select.input-name__input-choose(name="city" id="city-select")
+            option(value="") Sri Lanka
+            option(value="petersburg") Чуй
+            option(value="samara") Ош
+            option(value="perm") Талас
+            option(value="novosibirsk") Баткен
+        .input-name 
+          h3.input-name__title Street address
+          input.input-name__input(type="text")
+        .input-name 
+          h3.input-name__title Town / City
+          input.input-name__input(type="text")
+        .input-name 
+          h3.input-name__title Province
+          select.input-name__input-choose(name="city" id="city-select")
+            option(value="") Western Province
+            option(value="petersburg") Бишкек
+            option(value="samara") Ош
+            option(value="perm") Чолпон-Ата
+            option(value="novosibirsk") Кочкор
+        .input-name 
+          h3.input-name__title ZIP code
+          input.input-name__input(type="text")
+        .input-name 
+          h3.input-name__title Phone
+          input.input-name__input(type="text")
+        .input-name 
+          h3.input-name__title Email address
+          input.input-name__input(type="email")
+        .input-name 
+          h3.input-name__title 
+          input.input-name__input(type="text" placeholder="Additional information")
+
+
+      .column-information.col-5
+        .checkout 
+          .checkout__information
+            h3.checkout__title Product
+            h3.checkout__title Subtotal
+          .checkout__information
+            span.checkout__grey-subtitle Asgaard sofa   x1
+            span.checkout__price Rs. 250,000.00
+          .checkout__information
+            span.checkout__subtitle Subtotal
+            span.checkout__price Rs. 250,000.00
+          .checkout__information
+            span.checkout__subtitle Total
+            span.checkout__gold-price Rs. 250,000.00
+
+        hr.line 
+
+        .checkout-info 
+          .checkout-info__check
+            .checkout-info__circle
+            span.checkout-info__subtitle Direct Bank Transfer
+
+          p.checkout-info__info Make your payment directly into our bank account. Please use your Order ID as the payment reference. Your order will not be shipped until the funds have cleared in our account.
+          .checkout-info__check
+            .checkout-info__circle
+            span.checkout-info__subtitle Direct Bank Transfer
+          .checkout-info__check
+            .checkout-info__circle
+            span.checkout-info__subtitle Cash On Delivery
+          p.checkout-info__black-info Your personal data will be used to support your experience throughout this website, to manage access to your account, and for other purposes described in our privacy policy.
+script(src="../js/check-out.js")

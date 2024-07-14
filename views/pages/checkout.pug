@@ -3,5 +3,6 @@ extends ../layouts/layout.pug
 block content
     main(data-barba="container" data-barba-namespace="checkout")
         include ../mixins/breadcrumbs.pug
+        include ../sections/billing-details.pug
         +breadcrumbs('Checkout', 'Checkout')
         include ../components/advantages.pug
