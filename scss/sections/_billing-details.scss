@@ -1,0 +1,250 @@
+.billing-details {
+  padding: 100px 0;
+
+  &__title {
+    font-size: 36px;
+    font-weight: 600;
+    padding-bottom: 36px;
+  }
+
+  &__desc {
+    font-size: 16px;
+    margin: auto;
+    max-width: 644px;
+    color: #9f9f9f;
+    line-height: 1.5;
+  }
+
+  .input-names {
+    display: flex;
+    gap: 30px;
+
+    &__title {
+      font-size: 16px;
+      font-weight: 500;
+    }
+
+    &__input-top {
+      margin-top: 22px;
+      padding: 30px 60px;
+      width: 100%;
+      border: 1px solid #9f9f9f;
+      border-radius: 10px;
+      color: #9f9f9f;
+      box-sizing: border-box;
+
+      @include mobile {
+        margin-top: 10px;
+        padding: 20px 15px;
+      }
+    }
+  }
+
+  .adress-icon {
+    margin-bottom: 50px;
+  }
+
+  .phone-icon {
+    margin-bottom: 55px;
+  }
+
+  .clock-icon {
+    margin-bottom: 58px;
+  }
+
+  .row {
+    display: flex;
+    gap: 130px;
+
+    @include mobile {
+      flex-direction: column;
+      gap: 50px;
+    }
+  }
+
+  .column-information {
+    margin-top: 36px;
+
+    @include mobile {
+      margin-top: 50px;
+    }
+  }
+
+  .checkout {
+    gap: 30px;
+
+    &__information {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &__title {
+      font-size: 24px;
+      font-weight: 500;
+      margin-bottom: 15px;
+    }
+
+    &__subtitle {
+      margin-bottom: 22px;
+      font-size: 16px;
+      font-weight: 400;
+    }
+
+    &__grey-subtitle {
+      color: #9f9f9f;
+      margin-bottom: 22px;
+      font-size: 16px;
+      font-weight: 400;
+    }
+
+    &__gold-price {
+      color: #b88e2f;
+      margin-bottom: 22px;
+      font-size: 24px;
+      font-weight: 700;
+    }
+  }
+
+  .checkout-info {
+    &__subtitle {
+      color: #9f9f9f;
+      font-weight: 500;
+      font-size: 16px;
+    }
+
+    &__subtitle.active {
+      color: #020202;
+      font-weight: 500;
+      font-size: 16px;
+    }
+
+    &__info {
+      margin-top: 12px;
+      margin-bottom: 25px;
+      font-weight: 300;
+      font-size: 16px;
+      color: #9f9f9f;
+      line-height: 24px;
+    }
+
+    &__black-info {
+      margin-top: 22px;
+      font-weight: 300;
+      font-size: 16px;
+      color: #020202;
+      line-height: 24px;
+    }
+
+    &__check {
+      display: flex;
+      align-items: center;
+      margin: 12px;
+      cursor: pointer;
+    }
+    &__check.active {
+      display: flex;
+      align-items: center;
+      margin: 12px;
+      cursor: pointer;
+
+      .checkout-info__subtitle {
+        color: #020202;
+        font-weight: 500;
+        font-size: 16px;
+      }
+
+      .checkout-info__circle {
+        background-color: #020202;
+        color: #020202;
+        margin-right: 5px;
+        border-radius: 50%;
+        width: 14px;
+        height: 14px;
+      }
+    }
+
+    &__circle {
+      background-color: #fff;
+      border: solid 2px #9f9f9f;
+      margin-right: 5px;
+      border-radius: 50%;
+      width: 14px;
+      height: 14px;
+    }
+  }
+
+  .phone {
+    display: flex;
+    gap: 30px;
+    margin-top: 64px;
+
+    &__icon {
+      margin-bottom: 30px;
+    }
+  }
+
+  .column-input {
+    margin-top: 36px;
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+
+    @include mobile {
+      margin-top: 0;
+    }
+  }
+
+  .input-name {
+    &__input {
+      margin-top: 22px;
+      padding: 30px 25px;
+      width: 100%;
+      border: 1px solid #9f9f9f;
+      border-radius: 10px;
+      color: #9f9f9f;
+      box-sizing: border-box;
+
+      @include mobile {
+        margin-top: 10px;
+        padding: 20px 15px;
+      }
+    }
+
+    &__input-choose {
+      margin-top: 22px;
+      padding: 30px;
+      width: 100%;
+      border: 1px solid #9f9f9f;
+      border-radius: 10px;
+      color: #9f9f9f;
+      box-sizing: border-box;
+      background-color: #fff;
+    }
+  }
+
+  .input-name {
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  #input {
+    margin-top: 22px;
+    padding: 30px 25px;
+    box-sizing: border-box;
+    width: 100%;
+    border: 1px solid #9f9f9f;
+    border-radius: 10px;
+    color: #9f9f9f;
+    min-height: 120px;
+
+    @include mobile {
+      margin-top: 10px;
+      padding: 20px 15px;
+    }
+  }
+  .line {
+    color: #9f9f9f;
+    background-color: #9f9f9f;
+    margin-bottom: 28px;
+  }
+}
